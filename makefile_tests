@@ -1,0 +1,59 @@
+
+
+
+
+
+TESTS = t1 t2 t3 t4 t5 t6 t5 t7 t8 t9 t10 t11 t12 t13 t14 t15 t16 t17
+
+tests: $(TESTS)
+
+
+bst.o: bst.h bst.c
+	gcc  -c bst.c
+
+t1:  t1.c bst.o header.c tutil.c
+	gcc -g -o t1 t1.c bst.o
+
+t2:  t2.c bst.o header.c tutil.c
+	gcc -g -o t2 t2.c bst.o
+
+t3:  t3.c bst.o header.c tutil.c
+	gcc -g -o t3 t3.c bst.o
+
+t4:  t4.c bst.o header.c tutil.c
+	gcc -g -o t4 t4.c bst.o
+
+t5:  t5.c bst.o header.c tutil.c
+	gcc -g -o t5 t5.c bst.o
+
+t6:  t6.c bst.o header.c tutil.c
+	gcc -g -o t6 t6.c bst.o
+t7:  t7.c bst.o header.c tutil.c
+	gcc -g -o t7 t7.c bst.o
+t8:  t8.c bst.o header.c tutil.c
+	gcc -g -o t8 t8.c bst.o
+t9:  t9.c bst.o header.c tutil.c
+	gcc -g -o t9 t9.c bst.o
+t10:  t10.c bst.o header.c tutil.c
+	gcc -g -o t10 t10.c bst.o
+t11:  t11.c bst.o header.c tutil.c
+	gcc -g -o t11 t11.c bst.o
+t12:  t12.c bst.o header.c tutil.c
+	gcc -g -o t12 t12.c bst.o
+t13:  t13.c bst.o header.c tutil.c
+	gcc -g -o t13 t13.c bst.o
+t14:  t14.c bst.o header.c tutil.c
+	gcc -g -o t14 t14.c bst.o
+t15:  t15.c bst.o header.c tutil.c
+	gcc -g -o t15 t15.c bst.o
+t16:  t16.c bst.o header.c tutil.c
+	gcc -g -o t16 t16.c bst.o
+t17:  t17.c bst.o header.c tutil.c
+	gcc -g -o t17 t17.c bst.o
+
+
+
+
+clean:
+	rm -f *.o $(TESTS)
+
